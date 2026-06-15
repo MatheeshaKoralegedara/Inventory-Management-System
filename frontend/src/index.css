@@ -1,0 +1,157 @@
+/* ==========================================================================
+   1. CORE VARIABLES & DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  /* Layout Colors */
+  --bg-workspace: #f8fafc;        /* Soft Slate Gray */
+  --bg-card: #ffffff;             /* Crisp Pure White */
+  --text-main: #0f172a;           /* Deep Navy Slate */
+  --text-muted: #64748b;          /* Soft Muted Slate */
+  --border-color: #e2e8f0;        /* Subtle Border Gray */
+
+  /* Semantic Status Accent Colors */
+  --primary-brand: #0d6efd;       /* Vibrant Action Blue */
+  --success-bg: #ecfdf5;          /* Emerald Tint */
+  --success-text: #065f46;        /* Deep Emerald */
+  --danger-bg: #fef2f2;           /* Ruby Tint */
+  --danger-text: #991b1b;         /* Deep Ruby */
+
+  /* Global Curvatures & Shadows */
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.03), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+}
+
+/* ==========================================================================
+   2. GLOBAL DOCUMENT RESET
+   ========================================================================== */
+body {
+  background-color: var(--bg-workspace) !important;
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Accent */
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+/* Custom Text Brand Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #0d6efd, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   3. ENTERPRISE BOOTSTRAP OVERRIDES
+   ========================================================================== */
+
+/* Premium Cards Layout */
+.card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Global Sticky Modifier */
+.sticky-top {
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Sleek UI Form Controls */
+.form-control {
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-main) !important;
+  font-size: 0.95rem;
+  padding: 0.625rem 0.875rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.form-control:focus {
+  background-color: #fff !important;
+  border-color: #6366f1 !important; /* Premium Blue Indigo focus tint */
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* Buttons Unified Rounding */
+.btn {
+  border-radius: var(--radius-md) !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1.25rem;
+  transition: all var(--transition-fast) !important;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem !important;
+}
+
+/* ==========================================================================
+   4. DATA LEDGER MANAGEMENT TABLES
+   ========================================================================== */
+.table-responsive {
+  border-radius: var(--radius-md);
+}
+
+.table th {
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700 !important;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+tr {
+  border-bottom: 1px solid #f1f5f9 !important;
+  transition: background-color var(--transition-fast);
+}
+
+tr:last-child {
+  border-bottom: none !important;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Custom Soft Color Badges */
+.bg-success-subtle {
+  background-color: var(--success-bg) !important;
+  color: var(--success-text) !important;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.bg-danger-subtle {
+  background-color: var(--danger-bg) !important;
+  color: var(--danger-text) !important;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+/* Custom Navbar Spacing Alignment */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
