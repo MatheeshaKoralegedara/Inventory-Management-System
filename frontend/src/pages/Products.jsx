@@ -85,7 +85,7 @@ export default function Products() {
                 <div className="col-md-3">
                     <div className="card p-3 border-0 bg-white shadow-sm">
                         <div className="text-muted small fw-semibold text-uppercase">Asset Valuation</div>
-                        <div className="h2 fw-bold text-success mt-1">${estimatedValue.toLocaleString()}</div>
+                        <div className="h2 fw-bold text-success mt-1">Rs.{estimatedValue.toLocaleString()}</div>
                     </div>
                 </div>
                 <div className="col-md-3">
@@ -115,7 +115,7 @@ export default function Products() {
                                     <input className="form-control form-control-lg" type="number" value={quantity} placeholder="100" required onChange={(e) => setQuantity(e.target.value)} />
                                 </div>
                                 <div className="col-6">
-                                    <label className="form-label small fw-medium text-secondary">Unit Price ($)</label>
+                                    <label className="form-label small fw-medium text-secondary">Unit Price (Rs.)</label>
                                     <input className="form-control form-control-lg" type="number" step="0.01" value={price} placeholder="299.99" required onChange={(e) => setPrice(e.target.value)} />
                                 </div>
                             </div>
@@ -149,7 +149,7 @@ export default function Products() {
                                         {products.map((p) => (
                                             <tr key={p._id} className="border-bottom-subtle">
                                                 <td className="py-3 fw-semibold text-dark">{p.name}</td>
-                                                <td className="text-center py-3 text-secondary">${(p.price || 0).toFixed(2)}</td>
+                                                <td className="text-center py-3 text-secondary">Rs.{(p.price || 0).toFixed(2)}</td>
                                                 <td className="text-center py-3">
                                                     <span className={`badge rounded-pill px-3 py-2 fw-medium ${p.quantity > 5 ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger"}`}>
                                                         {p.quantity} available
