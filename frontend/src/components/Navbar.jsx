@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 shadow-sm">
-            <Link className="navbar-brand fw-bold text-gradient" to="/products">📦 IMS Admin</Link>
+            <Link className="navbar-brand fw-bold text-gradient" to="/products">📦 StockOps</Link>
             
             <div className="ms-auto d-flex align-items-center">
                 {token ? (
